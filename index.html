@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Educare — Professional 1-on-1 AI &amp; Software Engineering Mentorship</title>
+  <meta name="description" content="Accelerate your engineering skills with 1-on-1 personalized mentorship from verified senior software engineers. Master AI systems, distributed architecture, and production full-stack engineering.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+  <!-- Subtle Ambient Particle Canvas -->
+  <canvas id="starfield-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-link">
+        <div class="brand-badge">&lt;/&gt;</div>
+        <span>AI Educare</span>
+      </a>
+      <div class="nav-links">
+        <a href="#curriculum">Curriculum</a>
+        <a href="#lab">Interactive Code Lab</a>
+        <a href="#pricing">Pricing &amp; Plans</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <a href="become-reviewer.html" class="btn btn-outline btn-sm">Become a Mentor</a>
+        <a href="#booking" class="btn btn-primary btn-sm">Book a Session &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px;">
+          <span class="pill pill-cosmic">ENGINEERING MENTORSHIP PLATFORM</span>
+          <span class="pill pill-emerald">100% VETTED SENIOR MENTORS</span>
+        </div>
+        <h1>Accelerate Your Career with <span>Direct Senior Mentorship</span></h1>
+        <p class="hero-lead">
+          Master production AI engineering, distributed architecture, and modern full-stack development through personalized 1-on-1 live pair-programming sessions guided by verified tech leads.
+        </p>
+        <div class="hero-cta">
+          <a href="#pricing" class="btn btn-primary">View Mentorship Packages</a>
+          <a href="#lab" class="btn btn-outline">Explore Code Lab</a>
+        </div>
+
+        <!-- Metrics Row -->
+        <div class="metrics-row">
+          <div class="metric-item">
+            <span class="metric-val">5,000+</span>
+            <span class="metric-lbl">Taught Hours</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">98.4%</span>
+            <span class="metric-lbl">Satisfaction Score</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">Top 2%</span>
+            <span class="metric-lbl">Vetted Tech Leads</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">&lt; 2 Hrs</span>
+            <span class="metric-lbl">Mentor Match Time</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Senior Mentor Code Review Console (Interactive Hero Card) -->
+      <div class="mentor-console-card">
+        <div class="mentor-card-header">
+          <div class="mentor-profile-info">
+            <div class="mentor-avatar">MV</div>
+            <div class="mentor-details">
+              <h4>Dr. Michael Vance</h4>
+              <p>Principal AI Architect &bull; Ex-Big Tech Staff Engineer</p>
+            </div>
+          </div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            AVAILABLE
+          </div>
+        </div>
+
+        <div style="font-size: 0.74rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;">
+          Select Session Architecture Preview:
+        </div>
+
+        <div class="console-topic-selector">
+          <button class="topic-btn active" data-topic="rag">AI RAG &amp; Re-Ranking</button>
+          <button class="topic-btn" data-topic="api">Next.js Edge API</button>
+          <button class="topic-btn" data-topic="concurrency">Go Worker Pool</button>
+          <button class="topic-btn" data-topic="caching">Distributed Cache</button>
+        </div>
+
+        <div class="mentor-feedback-box">
+          <h5>1-on-1 Mentor Architecture Audit</h5>
+          <p id="mentor-feedback-text">
+            “Your vector search was pulling raw top-k chunks without re-ranking, resulting in context dilution. In this refactor, we inject a cross-encoder re-ranker and reciprocal rank fusion to prune hallucinations by 64%.”
+          </p>
+        </div>
+
+        <pre class="mentor-code-preview"><code id="mentor-code-block">async function retrieveContext(query: string, k = 5): Promise&lt;string[]&gt; {
+  const denseEmbeddings = await openai.embeddings.create({ input: query });
+  const rawMatches = await vectorIndex.query({ vector: denseEmbeddings.data[0].embedding, topK: k * 3 });
+  
+  // Mentor Optimization: Cross-Encoder Re-Ranking Pipeline
+  const reranked = await cohere.rerank({ query, documents: rawMatches.docs, topN: k });
+  return reranked.results.map(r => r.document.text);
+}</code></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- Specialization Tracks Bar -->
+  <section class="specializations-section" id="curriculum">
+    <div class="container" style="text-align: center;">
+      <span class="pill pill-cosmic" style="margin-bottom: 8px;">TECHNICAL SPECIALIZATIONS</span>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 1.35rem; font-weight: 700; color: #FFF; margin-top: 6px;">
+        Choose Your Mentorship Focus Area
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 4px;">
+        Click any specialization below to load it into your personalized booking request:
+      </p>
+
+      <div class="spec-pills-wrap">
+        <div class="spec-pill active" data-skill="Applied AI Systems &amp; LLM Engineering">
+          <span>🧠</span> Applied AI Systems &amp; LLM Engineering
+        </div>
+        <div class="spec-pill" data-skill="Next.js 15 &amp; Modern Full-Stack Web">
+          <span>⚡</span> Next.js &amp; Full-Stack TypeScript
+        </div>
+        <div class="spec-pill" data-skill="Distributed Systems &amp; Cloud Infrastructure">
+          <span>🌐</span> Distributed Systems &amp; Cloud Infra
+        </div>
+        <div class="spec-pill" data-skill="High-Performance Systems (Go &amp; Rust)">
+          <span>🦀</span> High-Performance Systems (Go / Rust)
+        </div>
+        <div class="spec-pill" data-skill="Vector Databases &amp; Semantic Retrieval">
+          <span>📊</span> Vector DBs &amp; Semantic Search
+        </div>
+        <div class="spec-pill" data-skill="System Design &amp; Senior Engineering Interviews">
+          <span>🎯</span> System Design &amp; Interview Mastery
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Code Playground & Simulator -->
+  <section class="section" id="lab">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill pill-cosmic">LIVE CODE LABORATORY</span>
+        <h2>Hands-On Engineering Playground</h2>
+        <p>Explore real code architectures designed and debugged during our 1-on-1 tutoring sessions. Run benchmarks directly in the code simulator.</p>
+      </div>
+
+      <div class="code-playground-wrap">
+        <div class="code-tabs-header">
+          <div class="code-tabs-list">
+            <button class="code-tab-btn active" data-code="python">
+              <span>🐍</span> Python (Vector Search)
+            </button>
+            <button class="code-tab-btn" data-code="typescript">
+              <span>⚡</span> TypeScript (Next.js Actions)
+            </button>
+            <button class="code-tab-btn" data-code="go">
+              <span>🐹</span> Go (Worker Pool)
+            </button>
+            <button class="code-tab-btn" data-code="rust">
+              <span>🦀</span> Rust (Zero-Copy Engine)
+            </button>
+          </div>
+          <div class="code-action-btns">
+            <button class="btn btn-outline btn-sm" id="copy-code-btn" style="padding: 6px 12px; font-size: 0.78rem;">
+              📋 Copy Code
+            </button>
+            <button class="btn btn-primary btn-sm" id="run-code-btn" style="padding: 6px 14px; font-size: 0.78rem;">
+              ▶ Run in Simulator
+            </button>
+          </div>
+        </div>
+
+        <div class="code-body-container">
+          <pre id="code-display-content"><code># Loading code snippet...</code></pre>
+        </div>
+
+        <div class="terminal-console-output" id="terminal-console-output">
+          <!-- Terminal Output Appears Here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Structured Curriculum Tracks -->
+  <section class="section" style="background: rgba(10, 14, 26, 0.6); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill pill-cosmic">CURRICULUM ARCHITECTURE</span>
+        <h2>Tailored Engineering Tracks</h2>
+        <p>Whether you're breaking into AI engineering or architecting distributed services, every curriculum is tailored to your exact tech stack and project roadmap.</p>
+      </div>
+
+      <div class="curriculum-grid">
+        <!-- Track 1 -->
+        <div class="curriculum-card">
+          <div class="curriculum-badge">CORE TRACK 01</div>
+          <h3>Applied AI &amp; LLM Engineering</h3>
+          <p>
+            Build production-grade AI systems from scratch. Master vector embeddings, hybrid semantic retrieval, agentic workflows, dynamic prompt optimization, and low-latency LLM serving.
+          </p>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">Python 3.12</span>
+            <span class="curriculum-tag">LangChain</span>
+            <span class="curriculum-tag">LlamaIndex</span>
+            <span class="curriculum-tag">Vector DBs</span>
+            <span class="curriculum-tag">RAG Pipeline</span>
+          </div>
+        </div>
+
+        <!-- Track 2 -->
+        <div class="curriculum-card">
+          <div class="curriculum-badge">CORE TRACK 02</div>
+          <h3>Production Web &amp; Next.js Systems</h3>
+          <p>
+            Architect full-stack applications with bulletproof type safety. Master Next.js App Router, Server Actions, resilient caching strategies, PostgreSQL indexing, and edge deployments.
+          </p>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">TypeScript</span>
+            <span class="curriculum-tag">Next.js 15</span>
+            <span class="curriculum-tag">PostgreSQL</span>
+            <span class="curriculum-tag">Redis</span>
+            <span class="curriculum-tag">Docker</span>
+          </div>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="curriculum-card">
+          <div class="curriculum-badge">CORE TRACK 03</div>
+          <h3>Distributed Systems &amp; Concurrency</h3>
+          <p>
+            Design resilient cloud backend microservices. Dive into concurrent worker architectures, message queues, memory-safe data structures, and high-throughput network protocols in Go and Rust.
+          </p>
+          <div class="curriculum-tags">
+            <span class="curriculum-tag">Go 1.22</span>
+            <span class="curriculum-tag">Rust</span>
+            <span class="curriculum-tag">gRPC</span>
+            <span class="curriculum-tag">Kafka</span>
+            <span class="curriculum-tag">System Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentorship Pricing Packages -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill pill-cosmic">TRANSPARENT PRICING</span>
+        <h2>Personalized Mentorship Tiers</h2>
+        <p>No recurring locked subscriptions. Select the exact pair-programming hours and architectural depth your career or project requires.</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Package 1: Sprint -->
+        <div class="package-card">
+          <div class="package-tag">Targeted Session</div>
+          <h3>Sprint Mentorship</h3>
+          <p class="package-desc">Single 1-on-1 pair-programming session to eliminate stubborn bugs, conduct a code audit, or master a specific architectural concept.</p>
+          <div class="package-price">$79 <span>/ 1 hr session</span></div>
+          <div class="package-duration">Scheduled within 24 hours of booking</div>
+          <ul class="package-features">
+            <li><span class="feature-check">&#10003;</span> 1 hour live video pair-programming</li>
+            <li><span class="feature-check">&#10003;</span> Screen sharing &amp; interactive live terminal</li>
+            <li><span class="feature-check">&#10003;</span> Bug triage &amp; code architecture review</li>
+            <li><span class="feature-check">&#10003;</span> Session summary notes &amp; GitHub commit summary</li>
+          </ul>
+          <a href="#booking" class="btn btn-outline" data-package="Sprint Mentorship ($79)">Select Sprint Track</a>
+        </div>
+
+        <!-- Package 2: Project (Highlight) -->
+        <div class="package-card highlight">
+          <div class="package-tag">Most Popular</div>
+          <h3>Project Acceleration</h3>
+          <p class="package-desc">Comprehensive project-building track. Design, implement, and deploy a production-ready AI or web system side-by-side with a tech lead.</p>
+          <div class="package-price">$249 <span>/ 4 hrs total</span></div>
+          <div class="package-duration">Flexible multi-session schedule over 2 weeks</div>
+          <ul class="package-features">
+            <li><span class="feature-check">&#10003;</span> 4 hours dedicated 1-on-1 mentorship</li>
+            <li><span class="feature-check">&#10003;</span> Custom curriculum designed for your project</li>
+            <li><span class="feature-check">&#10003;</span> Line-by-line GitHub pull request reviews</li>
+            <li><span class="feature-check">&#10003;</span> Production deployment &amp; CI/CD pipeline setup</li>
+            <li><span class="feature-check">&#10003;</span> 14 days of asynchronous mentor chat support</li>
+          </ul>
+          <a href="#booking" class="btn btn-primary" data-package="Project Acceleration ($249)">Select Project Track</a>
+        </div>
+
+        <!-- Package 3: Executive -->
+        <div class="package-card">
+          <div class="package-tag">Intensive Track</div>
+          <h3>Executive Mentorship</h3>
+          <p class="package-desc">Full-month intensive engineering mentorship for senior career transitions, engineering leadership, and scaling founders.</p>
+          <div class="package-price">$599 <span>/ full month</span></div>
+          <div class="package-duration">4 weeks of dedicated engineering acceleration</div>
+          <ul class="package-features">
+            <li><span class="feature-check">&#10003;</span> 10 hours live 1-on-1 pair-programming</li>
+            <li><span class="feature-check">&#10003;</span> Unlimited asynchronous GitHub code reviews</li>
+            <li><span class="feature-check">&#10003;</span> System design deep dives &amp; mock interviews</li>
+            <li><span class="feature-check">&#10003;</span> Architecture audit &amp; security review</li>
+            <li><span class="feature-check">&#10003;</span> Official AI Educare Engineering Certificate</li>
+          </ul>
+          <a href="#booking" class="btn btn-outline" data-package="Executive Mentorship ($599)">Select Executive Track</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutor Recruitment Banner -->
+  <section class="section">
+    <div class="container">
+      <div class="reviewer-banner">
+        <div>
+          <h3>Are you a Senior Staff Engineer or Tech Lead?</h3>
+          <p>
+            Join the AI Educare verified mentorship network. Guide engineers worldwide in AI systems, Python, TypeScript, Go, and distributed cloud architecture. Enjoy flexible hours and competitive compensation.
+          </p>
+        </div>
+        <a href="become-reviewer.html" class="btn btn-primary" style="background: #FFFFFF; color: #0A0E1A; flex-shrink: 0; font-weight: 700;">
+          Apply as a Mentor &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Booking / Inquiry Form -->
+  <section class="section" id="booking" style="background: rgba(14, 20, 36, 0.5); border-top: 1px solid var(--border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill pill-cosmic">GET STARTED</span>
+        <h2>Schedule Your 1-on-1 Mentorship Session</h2>
+        <p>Tell us your technical focus or project goals. Our team will match you with a verified senior tech lead within 2 hours.</p>
+      </div>
+
+      <div class="booking-card">
+        <form onsubmit="event.preventDefault(); alert('Mentorship inquiry received! An AI Educare mentor coordinator will connect with you within 2 hours to confirm your schedule.');">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student-name">Your Full Name</label>
+              <input type="text" id="student-name" class="form-control" placeholder="Alex Morgan" required>
+            </div>
+            <div class="form-group">
+              <label for="student-email">Email Address</label>
+              <input type="email" id="student-email" class="form-control" placeholder="alex@domain.com" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="selected-package">Selected Package</label>
+              <input type="text" id="selected-package" class="form-control" value="Project Acceleration ($249)" readonly>
+            </div>
+            <div class="form-group">
+              <label for="tutoring-skill-input">Focus Language / Specialization</label>
+              <input type="text" id="tutoring-skill-input" class="form-control" placeholder="e.g. Applied AI Systems &amp; LLM Engineering" value="Applied AI Systems &amp; LLM Engineering" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mission-goals">Project Goals &amp; Current Technical Blockers</label>
+            <textarea id="mission-goals" class="form-control" rows="3" placeholder="Describe your experience level, what project or architecture you are building, or what concept you want to master..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem;">
+            Confirm Mentorship Request &rarr;
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="pill pill-cosmic">KNOWLEDGE BASE</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about AI Educare's live pair-programming format, code environments, and mentor vetting standards.</p>
+      </div>
+
+      <div class="faq-box">
+        <div class="faq-row">
+          <div class="faq-question">
+            <span>How are AI Educare mentors selected and verified?</span>
+            <span class="faq-symbol">+</span>
+          </div>
+          <div class="faq-answer">
+            Every mentor undergoes rigorous identity verification, GitHub code portfolio audits, and live technical pair-programming evaluations before joining our network. Our mentors are practicing senior engineers, tech leads, and open-source contributors from top technology firms.
+          </div>
+        </div>
+
+        <div class="faq-row">
+          <div class="faq-question">
+            <span>Can developers at early stages benefit from these sessions?</span>
+            <span class="faq-symbol">+</span>
+          </div>
+          <div class="faq-answer">
+            Yes. Our mentors customize their pedagogy to your exact level. Whether you are transitioning to Python AI systems or mastering system architecture, your mentor adapts explanations to your pace without skipping foundational mechanics.
+          </div>
+        </div>
+
+        <div class="faq-row">
+          <div class="faq-question">
+            <span>What collaboration tools are used for live sessions?</span>
+            <span class="faq-symbol">+</span>
+          </div>
+          <div class="faq-answer">
+            We use collaborative development environments including VS Code Live Share, GitHub Codespaces, and Google Meet/Zoom with high-definition audio and screen sharing. You write and test code directly in your local environment with live mentor guidance.
+          </div>
+        </div>
+
+        <div class="faq-row">
+          <div class="faq-question">
+            <span>What if I need to reschedule a booked session?</span>
+            <span class="faq-symbol">+</span>
+          </div>
+          <div class="faq-answer">
+            Flexibility is built into our platform. You can reschedule any session up to 12 hours prior to the scheduled start time at zero penalty directly with your assigned mentor.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>
+            <span style="background: linear-gradient(135deg, #4F46E5 0%, #38BDF8 100%); padding: 6px 10px; border-radius: 8px; font-size: 0.95rem; font-family: 'JetBrains Mono', monospace;">&lt;/&gt;</span>
+            AI Educare
+          </h4>
+          <p>
+            Professional 1-on-1 software engineering mentorship, live AI pair-programming, and production architectural reviews for ambitious developers.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Curriculum &amp; Tracks</h5>
+          <a href="#curriculum">Applied AI Systems</a>
+          <a href="#curriculum">Full-Stack Next.js</a>
+          <a href="#curriculum">Distributed Systems</a>
+          <a href="#lab">Interactive Code Lab</a>
+          <a href="#pricing">Mentorship Plans</a>
+          <a href="become-reviewer.html">Apply as Mentor</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal &amp; Policy</h5>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Notice</a>
+          <a href="cookies.html">Cookie Preferences</a>
+          <a href="verifyss.html">Verification Hub</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-corporate">
+          <p>&copy; 2026 AI Educare. Operated by <strong>Veronica Educare Private Limited</strong></p>
+          <p>CIN: <strong>U74999KA2018PTC112451</strong> &bull; Status: <strong>Active</strong> &bull; Inc. 19 April 2018 under Companies Act (ROC Bangalore, Karnataka)</p>
+          <p>Registered Address: Indiranagar, Bangalore North, Bangalore, Karnataka, India 560038</p>
+          <p>Directors: Rakesh Kumar Purohit &bull; Sudam Charan Mishra</p>
+          <p>Website: <a href="https://aieducare.us" style="color: #38BDF8;">aieducare.us</a> &bull; Support: <a href="mailto:support@aieducare.us" style="color: #38BDF8;">support@aieducare.us</a></p>
+        </div>
+        <div style="display: flex; gap: 16px;">
+          <a href="terms.html" style="color: #94A3B8;">Terms</a>
+          <a href="privacy.html" style="color: #94A3B8;">Privacy</a>
+          <a href="cookies.html" style="color: #94A3B8;">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

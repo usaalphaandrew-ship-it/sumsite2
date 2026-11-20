@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="none">
+  <rect width="36" height="36" rx="9" fill="#0A0E1A"/>
+  <rect x="0.5" y="0.5" width="35" height="35" rx="8.5" stroke="#38BDF8" stroke-opacity="0.3"/>
+  <!-- Modern Geometric Monogram: AT / Terminal Accent -->
+  <path d="M11 25L18 9L25 25" stroke="url(#atGrad)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13.5 20H22.5" stroke="url(#atGrad)" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Terminal Prompt Spark -->
+  <circle cx="27" cy="11" r="2" fill="#38BDF8"/>
+  <defs>
+    <linearGradient id="atGrad" x1="11" y1="9" x2="25" y2="25" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+</svg>

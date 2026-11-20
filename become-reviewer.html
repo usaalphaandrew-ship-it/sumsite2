@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Onboarding &amp; Identity Verification — AI Educare</title>
+  <meta name="description" content="Join the AI Educare verified engineering mentor network. Complete standard technical tutor identity verification.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Nav -->
+  <nav class="site-nav">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-link">
+        <div class="brand-badge">&lt;/&gt;</div>
+        <span>AI Educare</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#curriculum">Curriculum</a>
+        <a href="/#lab">Code Lab</a>
+        <a href="/#pricing">Pricing</a>
+      </div>
+      <a href="/" class="btn btn-outline btn-sm">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="legal-header">
+    <div class="container" style="text-align: center;">
+      <span class="pill pill-cosmic" style="margin-bottom: 10px;">VERIFIED MENTOR NETWORK</span>
+      <h1>Technical Mentor Verification</h1>
+      <p>Complete your identity verification to receive vetted mentor credentials and start conducting 1-on-1 engineering sessions.</p>
+    </div>
+  </div>
+
+  <!-- Verification Card -->
+  <main style="flex: 1;">
+    <div class="verify-container">
+      <div class="verify-panel">
+        
+        <div class="info-note">
+          <strong>Security Protocol:</strong> To maintain senior engineering instruction standards and student trust, all AI Educare mentors undergo one-time identity verification. All data is securely encrypted in accordance with our <a href="privacy.html">Privacy Notice</a>.
+        </div>
+
+        <form id="verify-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reviewer-name">Full Legal Name</label>
+              <input type="text" id="reviewer-name" class="form-control" placeholder="e.g. David Chen" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="reviewer-email">Professional Email</label>
+              <input type="email" id="reviewer-email" class="form-control" placeholder="david@domain.com" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="reviewer-stack">Primary Technical Focus</label>
+              <input type="text" id="reviewer-stack" class="form-control" placeholder="e.g. Python AI Systems, Next.js Full-Stack, Go Microservices">
+            </div>
+            <div class="form-group">
+              <label for="reviewer-years">Years of Professional Engineering Experience</label>
+              <input type="text" id="reviewer-years" class="form-control" placeholder="e.g. 5+ Years">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="reviewer-github">GitHub or Technical Portfolio URL</label>
+            <input type="text" id="reviewer-github" class="form-control" placeholder="https://github.com/username">
+          </div>
+
+          <button type="button" id="start-btn" class="btn btn-primary" style="width: 100%; padding: 14px; margin-top: 10px; font-size: 1rem;">
+            Begin Secure Identity Verification &rarr;
+          </button>
+        </form>
+
+        <!-- WebSDK Container -->
+        <div id="sumsub-container"></div>
+        <div id="status-alert" class="status-alert"></div>
+
+      </div>
+
+      <p style="text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: 22px;">
+        By continuing, you agree to AI Educare <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Notice</a>.
+        Need assistance? Contact <a href="mailto:support@aieducare.us">support@aieducare.us</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="padding: 36px 0 28px;">
+    <div class="container" style="text-align: center; font-size: 0.8rem;">
+      <p>&copy; 2026 AI Educare. Operated by <strong>Veronica Educare Private Limited</strong> (CIN: <strong>U74999KA2018PTC112451</strong> &bull; Status: Active &bull; Inc. 19 April 2018, ROC Bangalore, Karnataka &bull; Indiranagar, Bangalore North, Bangalore 560038 &bull; Directors: Rakesh Kumar Purohit, Sudam Charan Mishra).</p>
+      <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+        <a href="terms.html" style="color: #94A3B8;">Terms of Service</a>
+        <a href="privacy.html" style="color: #94A3B8;">Privacy Notice</a>
+        <a href="cookies.html" style="color: #94A3B8;">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/verify.js"></script>
+</body>
+</html>
