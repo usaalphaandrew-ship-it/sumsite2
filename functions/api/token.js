@@ -1,6 +1,6 @@
 /**
  * Cloudflare Pages Function: /api/token
- * Automatically served at: https://aieducare.us/api/token
+ * Automatically served at: https://aieducare.site/api/token
  * Runs 24/7 serverless on Cloudflare Edge with zero maintenance.
  */
 

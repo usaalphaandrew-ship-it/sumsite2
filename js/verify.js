@@ -158,7 +158,7 @@ async function checkReviewerStatus() {
   if (status === 'completed' && outcome === 'GREEN') {
     displayStatus('Verification confirmed! Your reviewer profile is now approved.', 'success');
   } else if (status === 'completed' && outcome === 'RED') {
-    displayStatus('Verification could not be confirmed. Please reach out to support@aieducare.us.', 'error');
+    displayStatus('Verification could not be confirmed. Please reach out to support@aieducare.site.', 'error');
   } else {
     setTimeout(checkReviewerStatus, 5000);
   }

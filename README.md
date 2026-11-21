@@ -1,6 +1,6 @@
 # AI Educare
 
-Official web platform for **Veronica Educare Private Limited** (`aieducare.us`).
+Official web platform for **Veronica Educare Private Limited** (`aieducare.site`).
 
 ## Corporate Dossier
 * **Legal Entity Name**: Veronica Educare Private Limited

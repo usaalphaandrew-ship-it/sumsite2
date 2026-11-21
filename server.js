@@ -123,11 +123,11 @@ const server = http.createServer(async (req, res) => {
       if (action === 'create') {
         const applicantPayload = JSON.stringify({
           externalUserId: userId,
-          sourceKey: "aieducare.us",
+          sourceKey: "aieducare.site",
           metadata: [
-            { key: "Source", value: "aieducare.us" },
-            { key: "InitiatedFrom", value: "https://aieducare.us/verifyss.html" },
-            { key: "Domain", value: "aieducare.us" },
+            { key: "Source", value: "aieducare.site" },
+            { key: "InitiatedFrom", value: "https://aieducare.site/verifyss.html" },
+            { key: "Domain", value: "aieducare.site" },
             { key: "Level", value: levelName }
           ]
         });
