@@ -29,9 +29,12 @@ jobs:
         run: node scripts/generate-tokens.js
         env:
           SUMSUB_APP_TOKEN: ${{ secrets.SUMSUB_APP_TOKEN }}
-          SUMSUB_SECRET: ${{ secrets.SUMSUB_SECRET }}
-          SUMSUB_PROD_APP_TOKEN: ${{ secrets.SUMSUB_PROD_APP_TOKEN }}
-          SUMSUB_PROD_SECRET: ${{ secrets.SUMSUB_PROD_SECRET }}
+          SUMSUB_SECRET: ${{ secrets.SUMSUB_SECRET || secrets.SUMSUB_SECRET_KEY }}
+          SUMSUB_SECRET_KEY: ${{ secrets.SUMSUB_SECRET_KEY || secrets.SUMSUB_SECRET }}
+          SUMSUB_PROD_APP_TOKEN: ${{ secrets.SUMSUB_PROD_APP_TOKEN || secrets.SUMSUB_PRD_APP_TOKEN }}
+          SUMSUB_PRD_APP_TOKEN: ${{ secrets.SUMSUB_PRD_APP_TOKEN || secrets.SUMSUB_PROD_APP_TOKEN }}
+          SUMSUB_PROD_SECRET: ${{ secrets.SUMSUB_PROD_SECRET || secrets.SUMSUB_PRD_SECRET_KEY }}
+          SUMSUB_PRD_SECRET_KEY: ${{ secrets.SUMSUB_PRD_SECRET_KEY || secrets.SUMSUB_PROD_SECRET }}
 
       - name: Commit and Push Updated tokens.json
         run: |

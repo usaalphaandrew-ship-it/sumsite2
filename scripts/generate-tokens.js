@@ -8,10 +8,10 @@ const crypto = require("crypto");
 const fs = require("fs");
 const path = require("path");
 
-const SANDBOX_APP_TOKEN = process.env.SUMSUB_APP_TOKEN;
-const SANDBOX_SECRET = process.env.SUMSUB_SECRET;
-const PROD_APP_TOKEN = process.env.SUMSUB_PROD_APP_TOKEN;
-const PROD_SECRET = process.env.SUMSUB_PROD_SECRET;
+const SANDBOX_APP_TOKEN = process.env.SUMSUB_APP_TOKEN || process.env.SUMSUB_TOKEN;
+const SANDBOX_SECRET = process.env.SUMSUB_SECRET || process.env.SUMSUB_SECRET_KEY;
+const PROD_APP_TOKEN = process.env.SUMSUB_PROD_APP_TOKEN || process.env.SUMSUB_PRD_APP_TOKEN;
+const PROD_SECRET = process.env.SUMSUB_PROD_SECRET || process.env.SUMSUB_PRD_SECRET_KEY;
 
 const TTL_SECONDS = 86400; // 24 hours validity for each session
 
