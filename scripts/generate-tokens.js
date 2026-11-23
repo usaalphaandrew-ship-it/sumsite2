@@ -17,8 +17,8 @@ const TTL_SECONDS = 86400; // 24 hours validity for each session
 
 const LEVEL_CONFIGS = [
   {
-    name: "tutor-is-active-or-no-check",
-    description: "Tutor active status & identity liveness check",
+    name: "learner-liveness-check",
+    description: "Learner active identity & liveness check",
     sbxCount: 40,
     prdCount: 40
   },

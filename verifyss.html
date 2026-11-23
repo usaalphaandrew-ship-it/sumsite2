@@ -720,13 +720,13 @@
       </div>
 
       <div class="level-grid" id="level-grid">
-        <!-- Level Option 1: developer-liveness-check -->
-        <div class="level-card selected" onclick="selectLevel('developer-liveness-check')" data-level="developer-liveness-check">
+        <!-- Level Option 1: learner-liveness-check -->
+        <div class="level-card selected" onclick="selectLevel('learner-liveness-check')" data-level="learner-liveness-check">
           <div class="level-card-top">
-            <span class="level-name">developer-liveness-check</span>
+            <span class="level-name">learner-liveness-check</span>
           </div>
-          <div class="level-desc">Standard 3D biometric face liveness check (active selfie camera scan).</div>
-          <div class="level-quota" id="quota-developer-liveness-check">- ready</div>
+          <div class="level-desc">Learner 3D biometric face liveness check (active camera scan).</div>
+          <div class="level-quota" id="quota-learner-liveness-check">- ready</div>
         </div>
 
         <!-- Level Option 2: id-and-liveness -->
@@ -853,7 +853,7 @@
     const HISTORY_KEY   = "sumsub_session_history_v1";
 
     let currentEnv = "sandbox"; // 'sandbox' | 'production'
-    let currentLevel = "tutor-is-active-or-no-check";
+    let currentLevel = "learner-liveness-check";
     let is16by9 = true;
     let cloudSessions = [];
     let activeSession = null;
@@ -968,7 +968,7 @@
     // ─── Update UI with Available Fresh Counts ───
     function updatePoolUI() {
       const consumed = getConsumedSessionIds();
-      const levels = ['tutor-is-active-or-no-check', 'id-and-liveness', 'idv-and-phone-verification', 'id-only'];
+      const levels = ['learner-liveness-check', 'id-and-liveness', 'idv-and-phone-verification', 'id-only'];
 
       let currentLevelAvailableCount = 0;
       let totalEnvAvailableCount = 0;
